@@ -18,7 +18,7 @@ public class Principal {
 					StringBuffer msc = new StringBuffer();
 					msc.append(JOptionPane.showInputDialog("Digite o nome da música: ") + ";");
 					msc.append(JOptionPane.showInputDialog("Digite o artista da música: ") + ";");
-					msc.append(JOptionPane.showInputDialog("Digite a duração da música: ") + ";");
+					msc.append(JOptionPane.showInputDialog("Digite a duração da música: (em segundos)") + ";");
 					String musica = msc.toString();
 					p.adicionaMusica(playlist, musica);
 					break;
@@ -30,10 +30,10 @@ public class Principal {
 					p.executaPlaylist(playlist);
 					break;
 				case 9:
-					System.out.println("Fim");
+					System.out.println("Fim do programa");
 					break;
 				default:
-					System.out.println("Opção inválida");
+					System.out.println("Opção inválida digitada, tente novamente");
 					break;
 			}
 		} while (opc != 9);
